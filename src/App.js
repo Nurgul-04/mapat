@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Confirm from './comfirum/Confirm';
+
+const array =[
+  {
+    name:'Nurgul',
+    age:23
+  },
+  {
+    name:'Nurgu',
+    age:23
+  },
+  {
+    name:'Nurg',
+    age:22
+  },
+  {
+    name:'Nur',
+    age:21
+  },
+  {
+    name:'gul',
+    age:20
+  },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   {
+    array.map((el)=>{
+      return <Confirm key={el.age} name={el.name} age={el.age} />
+    })
+   }
     </div>
   );
 }
